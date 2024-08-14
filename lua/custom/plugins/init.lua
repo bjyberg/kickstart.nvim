@@ -89,35 +89,35 @@ return {
     },
   },
 
-  {
-    'nvim-neorg/neorg',
-    lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
-    version = '*', -- Pin Neorg to the latest stable release
-    config = function()
-      require('neorg').setup {
-        load = {
-          ['core.defaults'] = {},
-          ['core.concealer'] = {},
-          ['core.dirman'] = {
-            config = {
-              workspaces = {
-                personal = '~/Documents/management/notes/personal', -- Format: <name_of_workspace> = <path_to_workspace_root>
-                bioversity = '~/Documents/management/notes/work/bioversity',
-                recipes = '~/Documents/management/notes/recipes',
-              },
-              index = 'index.norg', -- The name of the main (root) .norg file
-            },
-          },
-          ['core.qol.todo_items'] = {
-            config = {
-              create_todo_items = true,
-              create_todo_parents = true,
-            },
-          },
-        },
-      }
-    end,
-  },
+  -- {
+  --   'nvim-neorg/neorg',
+  --   lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+  --   version = '*', -- Pin Neorg to the latest stable release
+  --   config = function()
+  --     require('neorg').setup {
+  --       load = {
+  --         ['core.defaults'] = {},
+  --         ['core.concealer'] = {},
+  --         ['core.dirman'] = {
+  --           config = {
+  --             workspaces = {
+  --               personal = '~/Documents/management/notes/personal', -- Format: <name_of_workspace> = <path_to_workspace_root>
+  --               bioversity = '~/Documents/management/notes/work/bioversity',
+  --               recipes = '~/Documents/management/notes/recipes',
+  --             },
+  --             index = 'index.norg', -- The name of the main (root) .norg file
+  --           },
+  --         },
+  --         ['core.qol.todo_items'] = {
+  --           config = {
+  --             create_todo_items = true,
+  --             create_todo_parents = true,
+  --           },
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
   {
     'nvim-tree/nvim-tree.lua',
     lazy = false,
